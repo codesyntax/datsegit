@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+datsegit/__init__.py
+datsegit.egg-info/PKG-INFO
+datsegit.egg-info/SOURCES.txt
+datsegit.egg-info/dependency_links.txt
+datsegit.egg-info/entry_points.txt
+datsegit.egg-info/not-zip-safe
+datsegit.egg-info/top_level.txt
