@@ -18,7 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = os.environ['SECRET_KEY']
-SECRET_KEY = '_p*568o7m-=))2wpg4elfhc+6t0wj!eezhu@ep1qge7*vn8xu6'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'photologue',
     'twhst'
     )
 
@@ -57,12 +58,6 @@ WSGI_APPLICATION = 'datsegit.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
@@ -77,12 +72,24 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
 
-TWITTER_ACCESS_KEY = ''
-TWITTER_ACCESS_TOKEN = ''
+##-------------------------------------------------------##
+## SECRET CONF MUST BE CLEARED BEFORE PUBLICATION        ##
+##-------------------------------------------------------##
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+
+
+TWITTER_CONSUMER_KEY = 'TgaoWBI2I7rA7q97Zo2dw'
+TWITTER_CONSUMER_SECRET = 'o5fYbk0wTlKTl8h7BmuwyF0DTs78WD5wXuoJRMHeb8'
+ACCESS_TOKEN = ''
+SECRET_KEY = '_p*568o7m-=))2wpg4elfhc+6t0wj!eezhu@ep1qge7*vn8xu6'
