@@ -5,9 +5,7 @@
 {{ object.description }}
 {{request}}
 </p>
-{% if object.hash_type == 1 %}
 {% include "twhst/alpha.html" %}
-{% endif %}
 {% if object.get_last_statuses %}
 <h2>Azkenak</h2>
 {% for status in object.get_last_statuses %}
