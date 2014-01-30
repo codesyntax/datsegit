@@ -1,0 +1,126 @@
+body{
+    background-color:white;
+    padding:0;
+    font-size:90%;
+    margin:0;
+
+}
+p{
+    line-height:1.8em;
+}
+a{
+    color:#dc0fa9;
+    text-decoration:none;
+}
+a:hover{
+    color:black;
+    text-decoration:underline;
+}
+h1{
+    font-size:280%;
+}
+h2{
+    font-size:180%;
+    padding:5px 10px;
+    background-color: #efefef;
+    border-radius:8px;
+}
+h3{
+    font-size:150%;
+}
+header{
+    width:100%;
+    border-bottom:2px solid #efefef;
+    margin:1em auto;
+    box-shadow:0 5px 5px rgba(1,1,1,0.2);
+}
+#headercontent{
+    max-width:1100px;
+    min-height:100px;
+    padding:0 1em;
+    float:inherit;
+    margin:0 auto;
+}
+#logo{
+    float:left;
+    margin-right:3%;
+}
+#tagline{
+    font-size:200%;
+    color:#ccc;
+    padding-top:60px;
+}
+/********************edukia*********/
+#maincontainer{
+    max-width:1100px;
+    margin:0 auto;
+    padding:2em 1em;
+    font-family:verdana;
+    line-height:1.8em;
+}
+
+.abian li{
+    display:block;
+    float:left;
+    width:45%;
+    margin:1%;
+}
+.abian li a{
+    display:block;
+    width:95%;
+    padding:2em 0;
+    border:3px solid #efefef;
+    border-radius:10px;
+    font-size:250%;
+    font-weight:bold;
+    text-align:center;
+    background: url("../img/d.gif") no-repeat left center;
+}
+.abian li a:hover{
+    background-color:#efefef;
+    color:black !important;
+    background-image:none;
+}
+.alpha{
+    font-size:110%;
+    color:#999;
+}
+.alpha a{
+    background-color:#efefef;
+    padding:2px 5px;
+    margin-right:5px;
+    border-radius:5px;
+    border:1px solid #ccc;
+    margin-bottom:1em;
+}
+.alpha a:hover{
+    background-color:#ccc;
+    text-decoration:none;
+}
+
+
+
+
+
+#visualclear{
+    clear:both;
+    margin-bottom:1em;
+}
+footer{
+  width:100%;
+    border-top:2px solid #efefef;
+    background-color:#efefef;
+}
+
+#footercontent{
+    max-width:1100px;
+    margin:0 auto;
+    padding:2em 1em;
+    text-align:center;
+    font-family:verdana;
+    color:#333;
+
+}
+footer img{
+    /*float:right;*/
+}
