@@ -12,6 +12,7 @@
 {% for status in object_list %}
 <div class="status">
 <img src="{{status.user_profile_image_url}}" height="50" width="50" />
+<div class="tweet_body">
 <h4>{{status.user_name}} <a href="http://twitter.com/{{status.user_screen_name}}">@{{status.user_screen_name}}</a> 
 <span class="statusdate">
  |
@@ -24,6 +25,7 @@
 <span class="twitter_options">
   <a href="https://twitter.com/intent/tweet?in_reply_to={{status.twitter_id}}" class="twitter_option"><span class="icon-arrow-left"></span>Responder</a> | <a href="https://twitter.com/intent/retweet?tweet_id={{status.twitter_id}}" class="twitter_option"><span class="icon-retweet"></span>Retwittear</a> | <a href="https://twitter.com/intent/favorite?tweet_id={{status.twitter_id}}" class="twitter_option"><span class="icon-star"></span>Favorito</a>
 </span>
+</div>
 </div>
 {% endfor %}
 
