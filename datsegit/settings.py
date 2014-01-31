@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', False)
 
 TEMPLATE_DEBUG = True
 
@@ -64,9 +64,9 @@ WSGI_APPLICATION = 'datsegit.wsgi.application'
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'eu'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Madrid'
 
 USE_I18N = True
 
@@ -79,19 +79,18 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-##-------------------------------------------------------##
-## SECRET CONF MUST BE CLEARED BEFORE PUBLICATION        ##
-##-------------------------------------------------------##
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': os.environ.get('DATABASE_ENGINE', 'django.db.backends.sqlite3'),
+        'NAME': os.env.get('DATABASE_NAME', os.path.join(BASE_DIR, 'db.sqlite3')),
+        'USER': os.env.get('DATABASE_USER', ''),
+        'PASSWORD': os.env.get('DATABASE_PASSWORD', ''),
+        'HOST': os.env.get('DATABASE_HOST', ''),
+        'PORT': os.env.get('DATABASE_PORT', ''),
     }
 }
 
+TWITTER_CONSUMER_KEY = os.env.get('TWITTER_CONSUMER_KEY', '') 
+TWITTER_CONSUMER_SECRET = os.env.get('TWITTER_CONSUMER_SECRET', '')
 
-TWITTER_CONSUMER_KEY = 'TgaoWBI2I7rA7q97Zo2dw'
-TWITTER_CONSUMER_SECRET = 'o5fYbk0wTlKTl8h7BmuwyF0DTs78WD5wXuoJRMHeb8'
-ACCESS_TOKEN = ''
-SECRET_KEY = '_p*568o7m-=))2wpg4elfhc+6t0wj!eezhu@ep1qge7*vn8xu6'
+SECRET_KEY = os.env.get('SECRET_KEY', '')
