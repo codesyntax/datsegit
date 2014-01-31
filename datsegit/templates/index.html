@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<ul class="abian">
+{% for object in object_list %}
+<li><a href="{% url "hashtag_index" object.name %}">{{object}} </a></li>
+{% endfor %}
+</ul>
+<div id="visualclear"></div>
+{% endblock %}
