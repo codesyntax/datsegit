@@ -12,7 +12,7 @@
 <h2>Azkenak</h2>
 {% for status in object.get_last_statuses %}
 <div class="status">
-<img src="{{status.user_profile_image_url}}" height="50" width="50" />
+<img class="pull-left" src="{{status.user_profile_image_url}}" height="50" width="50" />
 <div class="tweet_body">
 <h4>{{status.user_name}} <a href="http://twitter.com/{{status.user_screen_name}}">@{{status.user_screen_name}}</a> 
 <span class="statusdate">
