@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% load humanize %}
+{% block right %}
+<p id="hash_description">
+{{ object.description }}
+</p>
+{% endblock %}
 {% block content %}
 <h1>{{ object.name}}</h1>
-<p>
-{{ object.description }}
-{{request}}
-</p>
 {% include "twhst/alpha.html" %}
 {% if object.get_last_statuses %}
 <h2>Azkenak</h2>
