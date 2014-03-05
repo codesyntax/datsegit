@@ -10,4 +10,4 @@ class StatusFilteredList(ListView):
     def get_queryset(self):
         self.hashtag = Hashtag.objects.get(name=self.kwargs.get('slug'))
         self.filter = self.kwargs.get('letter')
-        return Status.objects.filter(hashtag=self.hashtag, text__istartswith=self.filter)
+        return Status.objects.filter(hashtag=self.hashtag, text__istartswith=self.filter).order_by('text')
