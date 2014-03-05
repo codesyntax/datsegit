@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% load humanize %}
+{% block right %}
+<p id="hash_description">
+{{ object.description }}
+</p>
+{% endblock %}
 {% block content %}
 <h1>{{ object.name}}</h1>
-<p>
-{{ object.description }}
-{{request}}
-</p>
 {% include "twhst/alpha.html" %}
 {% if object_list %}
 
@@ -13,17 +14,17 @@
 <div class="status">
 <img src="{{status.user_profile_image_url}}" height="50" width="50" />
 <div class="tweet_body">
-<h4>{{status.user_name}} <a href="http://twitter.com/{{status.user_screen_name}}">@{{status.user_screen_name}}</a> 
+<h4>{{status.user_name}} <a class="pull-left" href="http://twitter.com/{{status.user_screen_name}}">@{{status.user_screen_name}}</a> 
 <span class="statusdate">
  |
-<a href="http://twitter.com/{{status.user_screen_name}}/status/{{status.twitter_id}}"><abbr title="{{status.created_at}}">{{status.created_at|naturaltime}}</abbr></a>
+<a href="http://twitter.com/{{status.user_screen_name}}/status/{{status.twitter_id}}"><abbr title="{{status.created_at}}">{{status.created_at}}</abbr></a>
 </span>
 </h4>
 
 <p>{{status.renderStatus|safe}}</p>
 
 <span class="twitter_options">
-  <a href="https://twitter.com/intent/tweet?in_reply_to={{status.twitter_id}}" class="twitter_option"><span class="icon-arrow-left"></span>Responder</a> | <a href="https://twitter.com/intent/retweet?tweet_id={{status.twitter_id}}" class="twitter_option"><span class="icon-retweet"></span>Retwittear</a> | <a href="https://twitter.com/intent/favorite?tweet_id={{status.twitter_id}}" class="twitter_option"><span class="icon-star"></span>Favorito</a>
+  <a href="https://twitter.com/intent/tweet?in_reply_to={{status.twitter_id}}" class="twitter_option"><span class="icon-arrow-left"></span>Erantzun</a> | <a href="https://twitter.com/intent/retweet?tweet_id={{status.twitter_id}}" class="twitter_option"><span class="icon-retweet"></span>Bertxiotu</a> | <a href="https://twitter.com/intent/favorite?tweet_id={{status.twitter_id}}" class="twitter_option"><span class="icon-star"></span>Gogokoa</a>
 </span>
 </div>
 </div>
