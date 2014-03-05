@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load humanize %}
+{% load humanize datsegit%}
 {% block right %}
 <p id="hash_description">
 {{ object.description }}
@@ -17,7 +17,7 @@
 <h4>{{status.user_name}} <a class="pull-left" href="http://twitter.com/{{status.user_screen_name}}">@{{status.user_screen_name}}</a> 
 <span class="statusdate">
  |
-<a href="http://twitter.com/{{status.user_screen_name}}/status/{{status.twitter_id}}"><abbr title="{{status.created_at}}">{{status.created_at}}</abbr></a>
+<a href="http://twitter.com/{{status.user_screen_name}}/status/{{status.twitter_id}}"><abbr title="{{status.created_at}}">{{status.created_at|date_format}}</abbr></a>
 </span>
 </h4>
 
