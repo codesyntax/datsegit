@@ -1,5 +1,5 @@
 """
-Django settings for datsegit project.
+Django settings for {{ project_name }} project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -21,9 +21,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', False)
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = []
 
@@ -52,9 +52,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'datsegit.urls'
+ROOT_URLCONF = '{{ project_name }}.urls'
 
-WSGI_APPLICATION = 'datsegit.wsgi.application'
+WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
 
 
 # Database
@@ -81,16 +81,16 @@ STATIC_URL = '/static/'
 
 DATABASES = {
     'default': {
-        'ENGINE': os.environ.get('DATABASE_ENGINE', 'django.db.backends.sqlite3'),
-        'NAME': os.env.get('DATABASE_NAME', os.path.join(BASE_DIR, 'db.sqlite3')),
-        'USER': os.env.get('DATABASE_USER', ''),
-        'PASSWORD': os.env.get('DATABASE_PASSWORD', ''),
-        'HOST': os.env.get('DATABASE_HOST', ''),
-        'PORT': os.env.get('DATABASE_PORT', ''),
+        'ENGINE': '',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
     }
 }
 
-TWITTER_CONSUMER_KEY = os.env.get('TWITTER_CONSUMER_KEY', '') 
-TWITTER_CONSUMER_SECRET = os.env.get('TWITTER_CONSUMER_SECRET', '')
+TWITTER_CONSUMER_KEY = ''
+TWITTER_CONSUMER_SECRET = ''
 
-SECRET_KEY = os.env.get('SECRET_KEY', '')
+SECRET_KEY = '{{ secret_key }}'
