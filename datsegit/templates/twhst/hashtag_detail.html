@@ -2,7 +2,7 @@
 {% load datsegit %}
 {% block right %}
 <p id="hash_description">
-{{ object.description }}
+{{ object.description |safe}}
 </p>
 {% endblock %}
 {% block content %}
