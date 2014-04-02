@@ -8,8 +8,11 @@
 {% block content %}
 <h1>{{ object.name}}</h1>
 {% include "twhst/alpha.html" %}
-{% if object_list %}
 
+{% for di in dictionary %}
+<a href="{% url "dictionary_item" slug=object.name word=di.slug %}">{{di.title}}</a>{% if not forloop.last %} - {% endif %}
+{% endfor %}
+{% if object_list %}
 {% for status in object_list %}
 <div class="status">
 <img class="pull-left" src="{{status.user_profile_image_url}}" height="50" width="50" />
