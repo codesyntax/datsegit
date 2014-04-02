@@ -8,7 +8,7 @@
 {% block content %}
 <h1>{{ object.name}}</h1>
 {% include "twhst/alpha.html" %}
-<h2>Azken hitzakz</h2>
+<h2>Azken hitzak</h2>
 {% for dictionary_item in dictionary %}
 <a href="{% url "dictionary_item" slug=object.name word=dictionary_item.slug %}">{{dictionary_item.title}}</a> {% if not forloop.last %}-{% endif %}
 {% endfor %}
