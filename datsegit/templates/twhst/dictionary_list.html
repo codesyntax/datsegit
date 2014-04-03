@@ -6,9 +6,9 @@
 </p>
 {% endblock %}
 {% block content %}
-<h1>{{word}} <div class="hashtag_in_dict_list">{{ object.name}}</div></h1>
+<h1>{{object.name}}</h1>
 {% include "twhst/alpha.html" %}
-
+<h2>{{dictionary_title}}</h2>
 {% if object_list %}
 {% for di in object_list %}
 <div class="status">

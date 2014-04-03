@@ -27,7 +27,8 @@ class DictionaryListView(ListView):
     def get_context_data(self, **kwargs):
         context = super(DictionaryListView, self).get_context_data(**kwargs)
         context['word'] = self.kwargs.get('word')
-        context['object'] = Hashtag.objects.get(name=self.kwargs.get('slug'))        
+        context['dictionary_title'] = context['dictionary_list'][0].title
+        context['object'] = Hashtag.objects.get(name=self.kwargs.get('slug'))
         return context
     
     def get_queryset(self):
