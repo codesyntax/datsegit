@@ -1,6 +1,7 @@
 from django.db.models import Count
 from django.views.generic import ListView, DetailView
 from twhst.models import Status, Hashtag, Dictionary
+from datsegit.models import Edukia
 
 class StatusFilteredList(ListView):
     def get_context_data(self, **kwargs):
@@ -36,3 +37,10 @@ class DictionaryListView(ListView):
         word = self.kwargs.get('word')
         return Dictionary.objects.filter(slug=word, hashtag=hashtag).order_by('title')
     
+class IndexView(ListView):
+    model = Hashtag
+
+    def get_context_data(self, **kwargs):
+        context = super(IndexView, self).get_context_data(**kwargs)
+        context['edukiak'] = Edukia.objects.filter(public=True).order_by('added')
+        return context
