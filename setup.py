@@ -19,6 +19,7 @@ setup(name='datsegit',
       zip_safe=False,
       install_requires=[
           # -*- Extra requirements: -*-
+          'django-tinymce',
       ],
       entry_points="""
       # -*- Entry points: -*-
