@@ -8,6 +8,10 @@
 {% block content %}
 <h1>{{ object.name}}</h1>
 {% include "twhst/alpha.html" %}
+<h2>Adibidez...</h2>
+{% for dictionary_item in dictionary %}
+<a href="{% url "dictionary_item" slug=object.name word=dictionary_item.slug %}">{{dictionary_item.title}}</a> {% if not forloop.last %}-{% endif %}
+{% endfor %}
 {% if object.get_last_statuses %}
 <h2>Azkenak</h2>
 {% for status in object.get_last_statuses %}
@@ -31,4 +35,5 @@
 {% endfor %}
 
 {% endif %}
+
 {% endblock %}

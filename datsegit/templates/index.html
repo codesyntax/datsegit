@@ -7,3 +7,8 @@
 </ul>
 <div id="visualclear"></div>
 {% endblock %}
+{% block right %}
+{% for ed in edukiak %}
+<p>{{ed.text|safe}}</p>
+{% endfor %}
+{% endblock %}

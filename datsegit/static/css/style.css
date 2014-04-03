@@ -1,3 +1,5 @@
+@media screen {
+
 body{
     background-color:white;
     padding:0;
@@ -24,6 +26,7 @@ h2{
     padding:5px 10px;
     background-color: #efefef;
     border-radius:8px;
+    margin-bottom:0;
 }
 h3{
     font-size:150%;
@@ -45,10 +48,13 @@ header{
     float:left;
     margin-right:3%;
 }
+#logo img{
+    max-width:300px;
+}
 #tagline{
     font-size:200%;
     color:#ccc;
-    padding-top:60px;
+    padding-top:30px;
 }
 /********************edukia*********/
 #maincontainer{
@@ -58,7 +64,18 @@ header{
     font-family:verdana;
     line-height:1.8em;
 }
-
+#content{
+    width:68%;
+    float:left;
+}
+#right{
+    width:28%;
+    float:right;
+    padding:1em;
+    box-shadow:0 0px 15px rgba(1,1,1,0.4)inset;
+    border:2px solid #efefef;
+    
+}
 .abian li{
     display:block;
     float:left;
@@ -83,14 +100,16 @@ header{
 }
 .alpha{
     font-size:110%;
-    color:#999;
+    color:#ccc;
+    margin-bottom:1em;
 }
 .alpha a{
     background-color:#efefef;
     padding:2px 5px;
     margin-right:5px;
+    margin-bottom:5px;
     border-radius:5px;
-    border:1px solid #ccc;
+    border:1px solid white;
     margin-bottom:1em;
 }
 .alpha a:hover{
@@ -98,8 +117,79 @@ header{
     text-decoration:none;
 }
 
+.status{
+    border-top: 1px solid #efefef;
+    display: block;
+    float: left;
+    padding: 10px 0 5px;
+    width: 100%;
+    margin-top:1em;
+}
 
+.status img{
+    border-radius:8px;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    float: left;
+    margin: 5px 10px 0 0;
+}
+.tweet_body {
+    overflow: hidden;
+    
+}
 
+.status h4 {
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 75%;
+    margin-bottom: 0;
+    margin-top:0;
+    color: #999999;
+    font-weight: bold;
+}
+.status h4 a , .status .statusdate{
+    font-weight: normal;
+}
+.status p{
+    line-height:1.4em;
+    margin-top:0;
+}
+.tw_wrapper {
+    height: 25px;
+}
+.twitter_options {
+    font-family: verdana;
+    font-size: 75%;
+    clear:both !important;
+    float:left;
+}
+.tw_wrapper a {
+    color: #999999;
+}
+.twitter_options a {
+    padding: 2px 7px 2px 0;
+}
+
+.icon-arrow-left, .icon-retweet, .icon-star {
+    background: url("/static/img/icons.png") no-repeat scroll -14px 2px rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 14px;
+    line-height: 14px;
+    margin-right: 2px;
+    margin-top: 1px;
+    vertical-align: text-top;
+    width: 15px;
+}
+.icon-retweet {
+    background: url("/static/img/icons.png") no-repeat scroll -30px 2px rgba(0, 0, 0, 0);
+}
+.icon-star {
+    background: url("/static/img/icons.png") no-repeat scroll 1px 0 rgba(0, 0, 0, 0);
+}
+.twitterimage img{
+    border-radius:0;
+    border:2px solid #efefef;
+    max-height:400px;
+}
 
 
 #visualclear{
@@ -119,8 +209,16 @@ footer{
     text-align:center;
     font-family:verdana;
     color:#333;
+}
+
 
 }
-footer img{
-    /*float:right;*/
+
+
+@media only screen and (max-width: 800px) {
+    #content, #right{
+        width:98%;
+        float:none;
+        clear:both;
+    }
 }
